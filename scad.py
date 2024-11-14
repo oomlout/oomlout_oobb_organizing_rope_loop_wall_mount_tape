@@ -62,7 +62,7 @@ def make_scad(**kwargs):
     p3["thickness"] = 30
     p3["flange_extra"] = 12
     p3["flange_depth"] = 6
-    p3["screw_diameter"] = "m6"    
+    p3["screw_diameter"] = "m8"    
     part["kwargs"] = p3
     part["name"] = "peg"
     parts.append(part)
@@ -102,16 +102,16 @@ def get_base(thing, **kwargs):
     p3["pos"] = pos1
     oobb_base.append_full(thing,**p3)
     
-    #add plate
+    #add plate for rope
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
     p3["shape"] = f"oobb_plate"    
     p3["depth"] = depth+15
-    p3["height"] = 1
+    p3["height"] = 2
     #p3["holes"] = True         uncomment to include default holes
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
-    pos1[1] += -(height/2 * 15)
+    pos1[1] += -(height/2 * 15) + 15/2
     p3["pos"] = pos1
     oobb_base.append_full(thing,**p3)
 
@@ -133,10 +133,19 @@ def get_base(thing, **kwargs):
     p3["type"] = "n"
     p3["shape"] = f"oobb_hole"
     p3["radius"] = 13.5
-    #p3["m"] = "#"
+    p3["m"] = "#"
+    d = 20
+    p3["depth"] = d
     pos1 = copy.deepcopy(pos)    
     pos1[1] += 6
-    p3["pos"] = pos1
+    #clearance hole
+    pos2 = copy.deepcopy(pos)
+    pos1[1] += -22.5
+    pos1[2] += depth    
+    poss = []
+    poss.append(pos1)
+    poss.append(pos2)
+    p3["pos"] = poss
     oobb_base.append_full(thing,**p3)
 
     #add 15 mm diameter slot
@@ -159,13 +168,13 @@ def get_base(thing, **kwargs):
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "n"
     p3["shape"] = f"oobb_hole"
-    p3["radius_name"] = "m6"
+    p3["radius_name"] = "m8"
     d = (width * 15) - 1
     p3["depth"] = d
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)
     pos1[0] += -d/2
-    pos1[1] += -((height-1)/2) * 15 - 15/2
+    pos1[1] += -((height-1)/2) * 15 
     pos1[2] += depth + 15/2
     p3["pos"] = pos1
     rot1 = copy.deepcopy(rot)

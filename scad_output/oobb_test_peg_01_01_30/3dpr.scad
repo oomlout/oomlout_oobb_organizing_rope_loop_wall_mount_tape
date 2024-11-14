@@ -12,7 +12,7 @@ difference() {
 	}
 	union() {
 		#translate(v = [0, 0, -100.0000000000]) {
-			cylinder(h = 200, r = 3.2500000000);
+			cylinder(h = 200, r = 4.2500000000);
 		}
 	}
 }
