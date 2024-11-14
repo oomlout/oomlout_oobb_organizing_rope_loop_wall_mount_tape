@@ -59,7 +59,7 @@ def make_scad(**kwargs):
     p3["width"] = 1
     p3["height"] = 1
     
-    p3["thickness"] = 30
+    p3["thickness"] = 12
     p3["flange_extra"] = 12
     p3["flange_depth"] = 6
     p3["screw_diameter"] = "m8"    
@@ -122,7 +122,11 @@ def get_base(thing, **kwargs):
     p3["both_holes"] = True  
     p3["depth"] = depth
     p3["height"] = height-1
-    p3["holes"] = "corner"
+    p3["holes"] = "single"
+    locs = []
+    locs.append([1,5])
+    locs.append([3,5])
+    p3["location"] = locs
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
     p3["pos"] = pos1
@@ -133,15 +137,15 @@ def get_base(thing, **kwargs):
     p3["type"] = "n"
     p3["shape"] = f"oobb_hole"
     p3["radius"] = 13.5
-    p3["m"] = "#"
+    #p3["m"] = "#"
     d = 20
     p3["depth"] = d
     pos1 = copy.deepcopy(pos)    
     pos1[1] += 6
     #clearance hole
     pos2 = copy.deepcopy(pos)
-    pos1[1] += -22.5
-    pos1[2] += depth    
+    pos2[1] += -22.5
+    pos2[2] += depth    
     poss = []
     poss.append(pos1)
     poss.append(pos2)

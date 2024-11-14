@@ -3,8 +3,8 @@ $fn = 50;
 
 difference() {
 	union() {
-		translate(v = [0, 0, -30.0000000000]) {
-			cylinder(h = 30, r = 7);
+		translate(v = [0, 0, -12.0000000000]) {
+			cylinder(h = 12, r = 7);
 		}
 		translate(v = [0, 0, -6.0000000000]) {
 			cylinder(h = 6, r = 13);
