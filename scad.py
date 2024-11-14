@@ -15,7 +15,7 @@ def make_scad(**kwargs):
         #filter = "test"
 
         kwargs["save_type"] = "none"
-        kwargs["save_type"] = "all"
+        #kwargs["save_type"] = "all"
         
         kwargs["overwrite"] = True
         
@@ -45,7 +45,7 @@ def make_scad(**kwargs):
         part = copy.deepcopy(part_default)
         p3 = copy.deepcopy(kwargs)
         p3["width"] = 3
-        p3["height"] = 5
+        p3["height"] = 6
         p3["thickness"] = 6
         part["kwargs"] = p3
         
@@ -98,15 +98,30 @@ def get_base(thing, **kwargs):
     #p3["holes"] = True         uncomment to include default holes
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
+    pos1[1] += -7.5
     p3["pos"] = pos1
     oobb_base.append_full(thing,**p3)
     
+    #add plate
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = f"oobb_plate"    
+    p3["depth"] = depth+15
+    p3["height"] = 1
+    #p3["holes"] = True         uncomment to include default holes
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)         
+    pos1[1] += -(height/2 * 15)
+    p3["pos"] = pos1
+    oobb_base.append_full(thing,**p3)
+
     #add holes seperate
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
     p3["shape"] = f"oobb_holes"
     p3["both_holes"] = True  
     p3["depth"] = depth
+    p3["height"] = height-1
     p3["holes"] = "corner"
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)         
@@ -120,6 +135,7 @@ def get_base(thing, **kwargs):
     p3["radius"] = 13.5
     #p3["m"] = "#"
     pos1 = copy.deepcopy(pos)    
+    pos1[1] += 6
     p3["pos"] = pos1
     oobb_base.append_full(thing,**p3)
 
@@ -138,6 +154,26 @@ def get_base(thing, **kwargs):
     pos1 = copy.deepcopy(pos)    
     p3["pos"] = pos1
     oobb_base.append_full(thing,**p3)
+
+    #add m6 hole for rope
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = f"oobb_hole"
+    p3["radius_name"] = "m6"
+    d = (width * 15) - 1
+    p3["depth"] = d
+    #p3["m"] = "#"
+    pos1 = copy.deepcopy(pos)
+    pos1[0] += -d/2
+    pos1[1] += -((height-1)/2) * 15 - 15/2
+    pos1[2] += depth + 15/2
+    p3["pos"] = pos1
+    rot1 = copy.deepcopy(rot)
+    rot1[1] = 90
+    p3["rot"] = rot1
+    p3["zz"] = "middle"
+    oobb_base.append_full(thing,**p3)
+
 
     if prepare_print:
         #put into a rotation object
