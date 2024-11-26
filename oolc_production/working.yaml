@@ -2,5 +2,7 @@ project_id: oomlout_oobb_organizing_rope_loop_wall_mount_tape
 project_name: Oomlout Oobb Organizing Rope Loop Wall Mount Tape
 project_repo: https://github.com/oomlout/oomlout_oobb_organizing_rope_loop_wall_mount_tape
 production_format:
-  oolc_1:
-    file_location: source_files/oolc_1.cdr
+  oolc_1_base:
+    file_location: scad_output\oobb_test_base_03_06_06\laser_flat.svg
+  oolc_2_peg:
+    file_location: scad_output\oobb_test_peg_01_01_12\laser_flat.svg
