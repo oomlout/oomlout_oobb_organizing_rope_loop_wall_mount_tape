@@ -340,9 +340,15 @@ def make_scad_generic(part):
         opsc.opsc_make_object(f'scad_output/{thing["id"]}/{mode}.scad', thing["components"], mode=mode, save_type=save_type, overwrite=overwrite, layers=layers, tilediff=tilediff, start=start)    
     
     #dump kwargs into wortking.yaml
+    #get current directory
+    import os
+    cwd = os.getcwd()
+    part["project_name"] = cwd
+    part["id"] = thing["id"]
+    part["thing"] = thing
     with open(f"scad_output/{thing['id']}/working.yaml", 'w') as stream:
         try:
-            yaml.dump(kwargs, stream)
+            yaml.dump(part, stream)
         except yaml.YAMLError as exc:
             print(exc)
 

@@ -1,0 +1,190 @@
+full_rotations:
+- 0
+- 0
+- 0
+full_shift:
+- 0
+- 0
+- 0
+id: oobb_test_peg_01_01_12
+kwargs:
+  flange_depth: 6
+  flange_extra: 12
+  height: 1
+  modes:
+  - 3dpr
+  overwrite: true
+  save_type: none
+  screw_diameter: m8
+  thickness: 12
+  type: test_peg
+  width: 1
+name: peg
+project_name: C:\gh\oomlout_oobb_organizing_rope_loop_wall_mount_tape
+thing:
+  components:
+  - - depth: 12
+      h: 12
+      height: 1
+      inclusion: laser
+      pos: &id001
+      - 0
+      - 0
+      - -12.0
+      r: 7
+      radius: 7
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 12
+      h: 12
+      height: 1
+      inclusion: 3dpr
+      pos: *id001
+      r: 7
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 12
+      h: 12
+      height: 1
+      inclusion: 'true'
+      pos: *id001
+      r: 7
+      radius: 7
+      shape: cylinder
+      type: positive
+      width: 1
+  - - depth: 6
+      h: 6
+      height: 1
+      inclusion: laser
+      pos: &id002
+      - 0
+      - 0
+      - -6.0
+      r: 13
+      radius: 13
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 6
+      h: 6
+      height: 1
+      inclusion: 3dpr
+      pos: *id002
+      r: 13
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 6
+      h: 6
+      height: 1
+      inclusion: 'true'
+      pos: *id002
+      r: 13
+      radius: 13
+      shape: cylinder
+      type: positive
+      width: 1
+  - - h: 200
+      height: 1
+      inclusion: laser
+      m: '#'
+      pos: &id003
+      - 0
+      - 0
+      - -100.0
+      r: 4.0
+      shape: cylinder
+      type: negative
+      width: 1
+    - h: 200
+      height: 1
+      inclusion: 3dpr
+      m: '#'
+      pos: *id003
+      r: 4.25
+      shape: cylinder
+      type: negative
+      width: 1
+    - h: 200
+      height: 1
+      inclusion: 'true'
+      m: '#'
+      pos: *id003
+      r: 4.0
+      shape: cylinder
+      type: negative
+      width: 1
+  components_objects:
+  - depth: 12
+    flange_depth: 6
+    flange_extra: 12
+    height: 1
+    modes:
+    - 3dpr
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    radius: 7
+    save_type: none
+    screw_diameter: m8
+    shape: oobb_cylinder
+    thickness: 12
+    type: p
+    width: 1
+    zz: top
+  - depth: 6
+    flange_depth: 6
+    flange_extra: 12
+    height: 1
+    modes:
+    - 3dpr
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    radius: 13
+    save_type: none
+    screw_diameter: m8
+    shape: oobb_cylinder
+    thickness: 12
+    type: p
+    width: 1
+    zz: top
+  - flange_depth: 6
+    flange_extra: 12
+    height: 1
+    m: '#'
+    modes:
+    - 3dpr
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    radius_name: m8
+    save_type: none
+    screw_diameter: m8
+    shape: oobb_hole
+    thickness: 12
+    type: n
+    width: 1
+  components_string:
+  - oobb_cylinder_shape_p_type_12_depth_none_save_type_true_overwrite_'3dpr'_modes_1_width_1_height_12_thickness_12_flange_extra_6_flange_depth_m8_screw_diameter_7_radius_top_zz
+  - oobb_cylinder_shape_p_type_6_depth_none_save_type_true_overwrite_'3dpr'_modes_1_width_1_height_12_thickness_12_flange_extra_6_flange_depth_m8_screw_diameter_13_radius_top_zz
+  - oobb_hole_shape_n_type_m8_radius_name_none_save_type_true_overwrite_'3dpr'_modes_1_width_1_height_12_thickness_12_flange_extra_6_flange_depth_m8_screw_diameter
+  description: test peg 1x1x12
+  folder: things/oobb_test_peg_01_01_12
+  height: 1
+  height_mm: 14
+  id: oobb_test_peg_01_01_12
+  thickness: 12
+  thickness_mm: 12
+  type: test_peg
+  width: 1
+  width_mm: 14
