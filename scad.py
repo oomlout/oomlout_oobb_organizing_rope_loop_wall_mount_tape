@@ -2,6 +2,8 @@ import copy
 import opsc
 import oobb
 import oobb_base
+import yaml
+
 
 def main(**kwargs):
     make_scad(**kwargs)
@@ -78,6 +80,8 @@ def make_scad(**kwargs):
                 print(f"done {part['name']}")
             else:
                 print(f"skipping {part['name']}")
+
+    
 
 def get_base(thing, **kwargs):
 
@@ -334,6 +338,13 @@ def make_scad_generic(part):
         if "bunting" in thing:
             start = 0.5
         opsc.opsc_make_object(f'scad_output/{thing["id"]}/{mode}.scad', thing["components"], mode=mode, save_type=save_type, overwrite=overwrite, layers=layers, tilediff=tilediff, start=start)    
+    
+    #dump kwargs into wortking.yaml
+    with open(f"scad_output/{thing['id']}/working.yaml", 'w') as stream:
+        try:
+            yaml.dump(kwargs, stream)
+        except yaml.YAMLError as exc:
+            print(exc)
 
 
 if __name__ == '__main__':
