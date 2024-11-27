@@ -1,0 +1,573 @@
+parts:
+  oobb_test_base_03_06_06:
+    full_rotations:
+    - 0
+    - 0
+    - 0
+    full_shift:
+    - 0
+    - 0
+    - 0
+    id: oobb_test_base_03_06_06
+    kwargs:
+      height: 6
+      modes:
+      - 3dpr
+      overwrite: true
+      save_type: none
+      thickness: 6
+      type: test_base
+      width: 3
+    name: base
+    project_name: C:\gh\oomlout_oobb_organizing_rope_loop_wall_mount_tape
+    thing:
+      components:
+      - - depth: 6
+          height: 6
+          pos:
+          - 0
+          - -7.5
+          - 0
+          shape: rounded_rectangle
+          size:
+          - 44
+          - 89
+          - 6
+          type: positive
+          width: 3
+      - - depth: 21
+          height: 2
+          pos:
+          - 0
+          - -37.5
+          - 0
+          shape: rounded_rectangle
+          size:
+          - 44
+          - 29
+          - 21
+          type: positive
+          width: 3
+      - - - depth: 6
+            h: 6
+            inclusion: laser
+            m: ''
+            pos: &id001
+            - -15.0
+            - 30.0
+            - 0
+            r: 3.0
+            shape: cylinder
+            type: negative
+          - depth: 6
+            h: 6
+            inclusion: 3dpr
+            m: ''
+            pos: *id001
+            r: 3.25
+            shape: cylinder
+            type: negative
+          - depth: 6
+            h: 6
+            inclusion: 'true'
+            m: ''
+            pos: *id001
+            r: 3.0
+            shape: cylinder
+            type: negative
+        - - depth: 6
+            h: 6
+            inclusion: laser
+            m: ''
+            pos: &id002
+            - 15.0
+            - 30.0
+            - 0
+            r: 3.0
+            shape: cylinder
+            type: negative
+          - depth: 6
+            h: 6
+            inclusion: 3dpr
+            m: ''
+            pos: *id002
+            r: 3.25
+            shape: cylinder
+            type: negative
+          - depth: 6
+            h: 6
+            inclusion: 'true'
+            m: ''
+            pos: *id002
+            r: 3.0
+            shape: cylinder
+            type: negative
+      - - depth: 20
+          h: 20
+          height: 6
+          inclusion: laser
+          pos: &id003
+          - 0
+          - 6
+          - 0
+          r: 13.5
+          radius: 13.5
+          shape: cylinder
+          type: negative
+          width: 3
+        - depth: 20
+          h: 20
+          height: 6
+          inclusion: 3dpr
+          pos: *id003
+          r: 13.5
+          shape: cylinder
+          type: negative
+          width: 3
+        - depth: 20
+          h: 20
+          height: 6
+          inclusion: 'true'
+          pos: *id003
+          r: 13.5
+          radius: 13.5
+          shape: cylinder
+          type: negative
+          width: 3
+      - - depth: 20
+          h: 20
+          height: 6
+          inclusion: laser
+          pos: &id004
+          - 0
+          - -22.5
+          - 6
+          r: 13.5
+          radius: 13.5
+          shape: cylinder
+          type: negative
+          width: 3
+        - depth: 20
+          h: 20
+          height: 6
+          inclusion: 3dpr
+          pos: *id004
+          r: 13.5
+          shape: cylinder
+          type: negative
+          width: 3
+        - depth: 20
+          h: 20
+          height: 6
+          inclusion: 'true'
+          pos: *id004
+          r: 13.5
+          radius: 13.5
+          shape: cylinder
+          type: negative
+          width: 3
+      - - objects:
+          - depth: 6
+            h: 6
+            height: 6
+            inclusion: laser
+            r: 7.5
+            radius: 7.5
+            shape: slot
+            type: positive
+            width: 45
+          - depth: 6
+            h: 6
+            height: 6
+            inclusion: 3dpr
+            r: 7.5
+            shape: slot
+            type: positive
+            width: 45
+          - depth: 6
+            h: 6
+            height: 6
+            inclusion: 'true'
+            r: 7.5
+            radius: 7.5
+            shape: slot
+            type: positive
+            width: 45
+          pos:
+          - 0
+          - 0
+          - 0
+          rot:
+          - 0
+          - 0
+          - 90
+          type: rotation
+          typetype: n
+      - - depth: 44
+          h: 44
+          height: 6
+          inclusion: laser
+          pos: &id005
+          - -22.0
+          - -37.5
+          - 13.5
+          r: 4.0
+          rot: &id006
+          - 0
+          - 90
+          - 0
+          shape: cylinder
+          type: negative
+          width: 3
+        - depth: 44
+          h: 44
+          height: 6
+          inclusion: 3dpr
+          pos: *id005
+          r: 4.25
+          rot: *id006
+          shape: cylinder
+          type: negative
+          width: 3
+        - depth: 44
+          h: 44
+          height: 6
+          inclusion: 'true'
+          pos: *id005
+          r: 4.0
+          rot: *id006
+          shape: cylinder
+          type: negative
+          width: 3
+      components_objects:
+      - depth: 6
+        height: 6
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - -7.5
+        - 0
+        save_type: none
+        shape: oobb_plate
+        thickness: 6
+        type: p
+        width: 3
+      - depth: 21
+        height: 2
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - -37.5
+        - 0
+        save_type: none
+        shape: oobb_plate
+        thickness: 6
+        type: p
+        width: 3
+      - both_holes: true
+        depth: 6
+        height: 5
+        holes: single
+        location:
+        - - 1
+          - 5
+        - - 3
+          - 5
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - 0
+        - 0
+        save_type: none
+        shape: oobb_holes
+        thickness: 6
+        type: p
+        width: 3
+      - depth: 20
+        height: 6
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - 6
+        - 0
+        radius: 13.5
+        save_type: none
+        shape: oobb_hole
+        thickness: 6
+        type: n
+        width: 3
+      - depth: 20
+        height: 6
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - -22.5
+        - 6
+        radius: 13.5
+        save_type: none
+        shape: oobb_hole
+        thickness: 6
+        type: n
+        width: 3
+      - depth: 6
+        height: 6
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - 0
+        - 0
+        radius: 7.5
+        rot:
+        - 0
+        - 0
+        - 90
+        save_type: none
+        shape: oobb_slot
+        thickness: 6
+        type: n
+        width: 45
+        zz: top
+      - depth: 44
+        height: 6
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - -22.0
+        - -37.5
+        - 13.5
+        radius_name: m8
+        rot:
+        - 0
+        - 90
+        - 0
+        save_type: none
+        shape: oobb_hole
+        thickness: 6
+        type: n
+        width: 3
+        zz: middle
+      components_string:
+      - oobb_plate_shape_p_type_6_depth_0_-7.5_0_pos_none_save_type_true_overwrite_'3dpr'_modes_3_width_6_height_6_thickness
+      - oobb_plate_shape_p_type_21_depth_0_-37.5_0_pos_none_save_type_true_overwrite_'3dpr'_modes_3_width_2_height_6_thickness
+      - oobb_holes_shape_p_type_6_depth_none_save_type_true_overwrite_'3dpr'_modes_3_width_5_height_6_thickness_true_both_holes_single_holes_1_5_3_5_location
+      - oobb_hole_shape_n_type_20_depth_0_6_0_pos_none_save_type_true_overwrite_'3dpr'_modes_3_width_6_height_6_thickness_13.5_radius
+      - oobb_hole_shape_n_type_20_depth_0_-22.5_6_pos_none_save_type_true_overwrite_'3dpr'_modes_3_width_6_height_6_thickness_13.5_radius
+      - oobb_slot_shape_n_type_6_depth_none_save_type_true_overwrite_'3dpr'_modes_45_width_6_height_6_thickness_7.5_radius_top_zz_0_0_90_rot
+      - oobb_hole_shape_n_type_m8_radius_name_44_depth_-22.0_-37.5_13.5_pos_none_save_type_true_overwrite_'3dpr'_modes_3_width_6_height_6_thickness_0_90_0_rot_middle_zz
+      description: test base 3x6x6
+      folder: things/oobb_test_base_03_06_06
+      height: 6
+      height_mm: 89
+      id: oobb_test_base_03_06_06
+      thickness: 6
+      thickness_mm: 6
+      type: test_base
+      width: 3
+      width_mm: 44
+  oobb_test_peg_01_01_12:
+    full_rotations:
+    - 0
+    - 0
+    - 0
+    full_shift:
+    - 0
+    - 0
+    - 0
+    id: oobb_test_peg_01_01_12
+    kwargs:
+      flange_depth: 6
+      flange_extra: 12
+      height: 1
+      modes:
+      - 3dpr
+      overwrite: true
+      save_type: none
+      screw_diameter: m8
+      thickness: 12
+      type: test_peg
+      width: 1
+    name: peg
+    project_name: C:\gh\oomlout_oobb_organizing_rope_loop_wall_mount_tape
+    thing:
+      components:
+      - - depth: 12
+          h: 12
+          height: 1
+          inclusion: laser
+          pos: &id007
+          - 0
+          - 0
+          - -12.0
+          r: 7
+          radius: 7
+          shape: cylinder
+          type: positive
+          width: 1
+        - depth: 12
+          h: 12
+          height: 1
+          inclusion: 3dpr
+          pos: *id007
+          r: 7
+          shape: cylinder
+          type: positive
+          width: 1
+        - depth: 12
+          h: 12
+          height: 1
+          inclusion: 'true'
+          pos: *id007
+          r: 7
+          radius: 7
+          shape: cylinder
+          type: positive
+          width: 1
+      - - depth: 6
+          h: 6
+          height: 1
+          inclusion: laser
+          pos: &id008
+          - 0
+          - 0
+          - -6.0
+          r: 13
+          radius: 13
+          shape: cylinder
+          type: positive
+          width: 1
+        - depth: 6
+          h: 6
+          height: 1
+          inclusion: 3dpr
+          pos: *id008
+          r: 13
+          shape: cylinder
+          type: positive
+          width: 1
+        - depth: 6
+          h: 6
+          height: 1
+          inclusion: 'true'
+          pos: *id008
+          r: 13
+          radius: 13
+          shape: cylinder
+          type: positive
+          width: 1
+      - - h: 200
+          height: 1
+          inclusion: laser
+          m: '#'
+          pos: &id009
+          - 0
+          - 0
+          - -100.0
+          r: 4.0
+          shape: cylinder
+          type: negative
+          width: 1
+        - h: 200
+          height: 1
+          inclusion: 3dpr
+          m: '#'
+          pos: *id009
+          r: 4.25
+          shape: cylinder
+          type: negative
+          width: 1
+        - h: 200
+          height: 1
+          inclusion: 'true'
+          m: '#'
+          pos: *id009
+          r: 4.0
+          shape: cylinder
+          type: negative
+          width: 1
+      components_objects:
+      - depth: 12
+        flange_depth: 6
+        flange_extra: 12
+        height: 1
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - 0
+        - 0
+        radius: 7
+        save_type: none
+        screw_diameter: m8
+        shape: oobb_cylinder
+        thickness: 12
+        type: p
+        width: 1
+        zz: top
+      - depth: 6
+        flange_depth: 6
+        flange_extra: 12
+        height: 1
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - 0
+        - 0
+        radius: 13
+        save_type: none
+        screw_diameter: m8
+        shape: oobb_cylinder
+        thickness: 12
+        type: p
+        width: 1
+        zz: top
+      - flange_depth: 6
+        flange_extra: 12
+        height: 1
+        m: '#'
+        modes:
+        - 3dpr
+        overwrite: true
+        pos:
+        - 0
+        - 0
+        - 0
+        radius_name: m8
+        save_type: none
+        screw_diameter: m8
+        shape: oobb_hole
+        thickness: 12
+        type: n
+        width: 1
+      components_string:
+      - oobb_cylinder_shape_p_type_12_depth_none_save_type_true_overwrite_'3dpr'_modes_1_width_1_height_12_thickness_12_flange_extra_6_flange_depth_m8_screw_diameter_7_radius_top_zz
+      - oobb_cylinder_shape_p_type_6_depth_none_save_type_true_overwrite_'3dpr'_modes_1_width_1_height_12_thickness_12_flange_extra_6_flange_depth_m8_screw_diameter_13_radius_top_zz
+      - oobb_hole_shape_n_type_m8_radius_name_none_save_type_true_overwrite_'3dpr'_modes_1_width_1_height_12_thickness_12_flange_extra_6_flange_depth_m8_screw_diameter
+      description: test peg 1x1x12
+      folder: things/oobb_test_peg_01_01_12
+      height: 1
+      height_mm: 14
+      id: oobb_test_peg_01_01_12
+      thickness: 12
+      thickness_mm: 12
+      type: test_peg
+      width: 1
+      width_mm: 14
+project_id: oomlout_oobb_organizing_rope_loop_wall_mount_tape
+project_name: Oomlout oobb organizing rope loop wall mount tape
+project_repo: https://github.com/oomlout/oomlout_oobb_organizing_rope_loop_wall_mount_tape
